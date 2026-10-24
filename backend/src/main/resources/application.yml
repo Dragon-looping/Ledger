@@ -28,6 +28,8 @@ spring:
         web-allow-others: false
 
 ledger:
+  currency:
+    default: INR
   cors:
     allowed-origins:
       - "http://localhost:5173"
