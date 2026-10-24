@@ -1,0 +1,22 @@
+{
+  "name": "ledger-os",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ledger OS - Personal Expense Tracker Monorepo",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"backend,frontend\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && .\\mvnw.cmd spring-boot:run",
+    "dev:backend:unix": "cd backend && ./mvnw spring-boot:run",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && .\\mvnw.cmd clean package -DskipTests",
+    "build:backend:unix": "cd backend && ./mvnw clean package -DskipTests",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:backend": "cd backend && .\\mvnw.cmd test",
+    "test:frontend": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

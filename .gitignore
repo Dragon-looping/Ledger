@@ -1,0 +1,23 @@
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm
+
+# Backend / Java / Maven
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/data/
+*.db
+*.trace.db
+
+# IDEs & System
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+*.log
